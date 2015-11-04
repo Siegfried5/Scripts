@@ -18,7 +18,10 @@ auto lo eth0
 iface lo inet loopback
 iface eth0 inet static
 	address 192.168.5.2 # CHANGE THIS FOR THE OTHER MACHINE
-	netmask 255.255.255.0
-	gateway 192.168.5.1
+	netmask 255.255.255.0 # CHANGE THIS TO MATCH YOURE SUBNET
+	gateway 192.168.5.1 # CHANGE THIS TO MATCH YOURE DEFAULT GATEWAY
 EOF
+sleep 1
 sed -i 's/int/# &/g' /etc/network/interfaces
+
+# EOF
