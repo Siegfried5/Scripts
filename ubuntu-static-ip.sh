@@ -1,4 +1,4 @@
-#! bin/bash
+#! /bin/bash
 # Author: Rudolph Ponce
 # RUN THIS SCRIPT AS ROOT!!!!
 # This Script Will Assign A Static IP Address
