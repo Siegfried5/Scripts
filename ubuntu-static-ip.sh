@@ -5,23 +5,38 @@
 # You May Want to Change a the IP Addr, Netmask, 
 # And Gateway To Match Youre Own
 
-echo "Hello World..."
-echo "This Script Will Assign A Static IP Address..."
-echo "Please wait..."
-cd /etc/network/
-sleep 5
-cp /etc/network/interfaces interfaces.bak -v
-sleep 5
+echo "[+] Welcome to Ubuntu static IP setup"
+sleep 1
+echo "[+] This Script Will Assign A Static IP Address"
+sleep 1
+echo "[+] A back up of the Interfaces is being made"
+sleep 1
+echo "[+] Please wait.."
+sleep 1
+echo "[+] Running cp /etc/network/interfaces interfaces.bak"
+cp /etc/network/interfaces interfaces.bak
+sleep 1
+echo "[+] /etc/network/interfaces’ -> ‘interfaces.bak"
+echo "[+] Backup Complete"
+
+sleep 1
 cat > /etc/network/interfaces << EOF
-interfaces(5) file used by ifup(8) and ifdown(8)
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+# The loopback network interface
 auto lo eth0
 iface lo inet loopback
 iface eth0 inet static
-	address 192.168.5.2 # CHANGE THIS FOR THE OTHER MACHINE
-	netmask 255.255.255.0 # CHANGE THIS TO MATCH YOURE SUBNET
-	gateway 192.168.5.1 # CHANGE THIS TO MATCH YOURE DEFAULT GATEWAY
+	address 192.168.5.2
+	netmask 255.255.255.0
+	gateway 192.168.5.1
 EOF
 sleep 1
-sed -i 's/int/# &/g' /etc/network/interfaces
-
+echo "[+] Setup Done"
+echo "[+] Ending Script"
 # EOF
