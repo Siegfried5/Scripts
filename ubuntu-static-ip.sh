@@ -22,10 +22,6 @@ sleep 1
 
 
 cat > /etc/network/interfaces << EOF
-# This file describes the network interfaces available on your system
-# and how to activate them. For more information, see interfaces(5).
-
-source /etc/network/interfaces.d/*
 
 # interfaces(5) file used by ifup(8) and ifdown(8)
 
