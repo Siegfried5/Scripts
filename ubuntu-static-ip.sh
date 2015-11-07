@@ -40,6 +40,6 @@ sleep 1
 cd /etc/network/
 cat interfaces
 sleep 5
-services networking restart
+service networking restart
 echo "[+] Ending Script"
 # EOF
