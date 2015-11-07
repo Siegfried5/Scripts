@@ -14,9 +14,9 @@ echo "[+] A back up of the Interfaces is being made"
 sleep 1
 echo "[+] Please wait.."
 sleep 1
-echo "[+] Running cp /etc/network/interfaces interfaces.bak"
+echo "[+] Running cp /etc/network/interfaces /etc/network/interfaces.bak"
 cp /etc/network/interfaces /etc/network/interfaces.bak
-echo "[+] /etc/network/interfaces’ -> ‘interfaces.bak"
+echo "[+] /etc/network/interfaces’ -> /etc/network/interfaces.bak"
 echo "[+] Backup Complete"
 sleep 1
 
@@ -32,8 +32,9 @@ iface eth0 inet static
 address 192.168.5.2
 netmask 255.255.255.0
 gateway 192.168.5.1
+nameserver 10.9.63.9
+nameserver 10.9.63.10
 EOF
-
 
 sleep 1
 echo "[+] Setup Done"
