@@ -32,8 +32,6 @@ iface eth0 inet static
 address 192.168.5.2
 netmask 255.255.255.0
 gateway 192.168.5.1
-nameserver 10.9.63.9
-nameserver 10.9.63.10
 EOF
 
 sleep 1
