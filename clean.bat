@@ -1,4 +1,5 @@
 @echo off
+color a
 del /s /f /q c:\windows\temp\*.*
 rd /s /q c:\windows\temp
 md c:\windows\temp
@@ -16,3 +17,4 @@ deltree /y c:\windows\recent
 deltree /y c:\windows\spool\printers
 del c:\WIN386.SWP
 cls 
+pause
