@@ -26,7 +26,6 @@ cat > /etc/network/interfaces << EOF
 # interfaces(5) file used by ifup(8) and ifdown(8)
 
 # The loopback network interface
-auto lo eth0
 iface lo inet loopback
 iface eth0 inet static
 address 192.168.5.2
