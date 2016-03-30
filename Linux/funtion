@@ -1,0 +1,29 @@
+funtion vis ()
+{
+  echo '#!/bin/bash' >> $1
+  echo '#Rudolph Ponce' >> $1
+  echo -n '#' >> $1
+  echo `date` >> $1
+  echo '' >> $1
+  chmod 770 $1
+  vi $1
+}
+
+funtion vip ()
+{
+  echo '#!/usr/bin/python' >> $1
+  echo '#Rudolph Ponce' >> $1
+  echo -n '#' >> $1
+  echo `date` >> $1
+  echo '' >> $1
+  chmod 770 $1
+  vi $1
+}
+
+funtion org ()
+{
+  echo "Sorting Files"
+  time sort $1 >> $2
+  echo ""
+  echo "Done Sorting"
+}
