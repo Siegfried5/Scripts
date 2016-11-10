@@ -16,5 +16,4 @@ deltree /y c:\windows\cookies
 deltree /y c:\windows\recent
 deltree /y c:\windows\spool\printers
 del c:\WIN386.SWP
-cls 
 pause
