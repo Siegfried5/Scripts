@@ -5,7 +5,7 @@ cd $HOME
 if ! git="$(type -p "$git")" || [ -z "$git" ]
 then
   sudo apt-get install git
-done
+fi
 cd $HOME
 git clone https://github.com/jbremer/vmcloak
 
